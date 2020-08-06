@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+<!-- 数据环境 -->
+	<environments default="development">
+	<!-- 开发环境 -->
+    <environment id="development">
+      <transactionManager type="JDBC" />
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://112.74.84.42/Test?useUnicode=true&amp;characterEncoding=UTF-8" />
+        <property name="username" value="root" />
+        <property name="password" value="Xkh0716!" />
+      </dataSource>
+    </environment>
+ 
+<!-- 测试环境 -->
+    <environment id="test">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://112.74.84.42/Test?useUnicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Xkh0716!"/>
+      </dataSource>
+    </environment>
+
+<!-- 生产环境 -->
+    <environment id="produce">
+      <transactionManager type="JDBC"/>
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://112.74.84.42/Test?useUnicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="Xkh0716!"/>
+      </dataSource>
+    </environment>
+
+ </environments>
+  <mappers>
+    <mapper resource="com/yc/dao/ProductMapper.xml"/>
+  </mappers>
+</configuration>
